@@ -1,0 +1,978 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="2/7/2023 6:40:48 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-RM5D6O6"
+  DTS:CreatorName="DESKTOP-RM5D6O6\spencgra"
+  DTS:Description="SSIS Package Description"
+  DTS:DTSID="{741ACFBF-2FE2-4FC0-BA42-EA1B0C9278E5}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.644.0"
+  DTS:LocaleID="2057"
+  DTS:MaxErrorCount="0"
+  DTS:ObjectName="WHR2019"
+  DTS:VersionGUID="{5FDAE46E-E981-4158-83B9-1383A89BF210}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{16D341AD-09A5-446D-B850-A89781AFB22C}"
+      DTS:ObjectName="DestinationConnectionOLEDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DevServer\MSSQL2022,64921;User ID=sa;Initial Catalog=DataAnalysis;Provider=SQLOLEDB;Auto Translate=false;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAArzSLUFMKf0aGFvtCxcVqXQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAxoJUEYPShiBnD+iLcpkhYbGBaDns3R1NVzaQvFrPppgAAAAAOgAAAAAIAACAAAADi5mfZ9sL486Df2oOvkNYoJGwvaH1Rqdjv5RRZNqEsAiAAAACsQ1aj6OYfLRxbiLNTTQ4Q3JJ1pDS0yuotwO7Jsvcsx0AAAAA0MyfiJ2NAMLE/i2f/dDTZxUvyy1ACHbOcxsVcDFjNNiMzNRd0a9mjfQTov7ILM92YftPkhKiEdJ7IsshEOQcf</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SourceConnectionFlatFile]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{8DF7D1CE-1ABE-4629-8C2C-BE6DD3A088C1}"
+      DTS:ObjectName="SourceConnectionFlatFile">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="2057"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="\\NASD2D838\Public\WorldHappinessReport\2019.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Overall rank"
+              DTS:DTSID="{4EC0037C-C207-47DB-BDFA-53AEC0E5B8DC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Country or region"
+              DTS:DTSID="{622E64C6-723C-488D-9FCB-2285E76DD699}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Score"
+              DTS:DTSID="{BEA87234-1876-410B-82C6-96D8D5EE5A58}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="GDP per capita"
+              DTS:DTSID="{735A328B-A9CB-46BC-BE30-9E383FB54262}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Social support"
+              DTS:DTSID="{507C2D08-4C7F-4773-AB5B-FF91737B2600}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Healthy life expectancy"
+              DTS:DTSID="{A5B63D69-835D-4984-9826-FFA4E0D838FC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Freedom to make life choices"
+              DTS:DTSID="{0199A583-9748-4BF1-8F52-3931DF64C753}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Generosity"
+              DTS:DTSID="{A3FAB9A0-7429-4584-98EA-FA3B4B8DA93B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Perceptions of corruption"
+              DTS:DTSID="{28EF69C0-350B-453E-B4AE-A45B2A39939C}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task 1"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:DTSID="{79AF8B4A-6DFB-4007-998B-31CC7B3B6915}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:FailPackageOnFailure="True"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task 1"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          defaultBufferSize="3145728"
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task 1\Data Conversion 0 - 0"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion 0 - 0"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input].Columns[Overall rank]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Overall rank"
+                      lineageId="Package\Data Flow Task 1\Source - 2019_csv.Outputs[Flat File Source Output].Columns[Overall rank]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input].Columns[Country or region]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Country or region"
+                      lineageId="Package\Data Flow Task 1\Source - 2019_csv.Outputs[Flat File Source Output].Columns[Country or region]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input].Columns[Score]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Score"
+                      lineageId="Package\Data Flow Task 1\Source - 2019_csv.Outputs[Flat File Source Output].Columns[Score]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input].Columns[GDP per capita]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="GDP per capita"
+                      lineageId="Package\Data Flow Task 1\Source - 2019_csv.Outputs[Flat File Source Output].Columns[GDP per capita]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input].Columns[Social support]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Social support"
+                      lineageId="Package\Data Flow Task 1\Source - 2019_csv.Outputs[Flat File Source Output].Columns[Social support]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input].Columns[Healthy life expectancy]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Healthy life expectancy"
+                      lineageId="Package\Data Flow Task 1\Source - 2019_csv.Outputs[Flat File Source Output].Columns[Healthy life expectancy]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input].Columns[Freedom to make life choices]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Freedom to make life choices"
+                      lineageId="Package\Data Flow Task 1\Source - 2019_csv.Outputs[Flat File Source Output].Columns[Freedom to make life choices]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input].Columns[Generosity]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Generosity"
+                      lineageId="Package\Data Flow Task 1\Source - 2019_csv.Outputs[Flat File Source Output].Columns[Generosity]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input].Columns[Perceptions of corruption]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Perceptions of corruption"
+                      lineageId="Package\Data Flow Task 1\Source - 2019_csv.Outputs[Flat File Source Output].Columns[Perceptions of corruption]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Overall rank]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Overall rank]"
+                      name="Overall rank"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task 1\Source - 2019_csv.Outputs[Flat File Source Output].Columns[Overall rank]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Country or region]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Country or region]"
+                      name="Country or region"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task 1\Source - 2019_csv.Outputs[Flat File Source Output].Columns[Country or region]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Score]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Score]"
+                      name="Score"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task 1\Source - 2019_csv.Outputs[Flat File Source Output].Columns[Score]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[GDP per capita]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[GDP per capita]"
+                      name="GDP per capita"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task 1\Source - 2019_csv.Outputs[Flat File Source Output].Columns[GDP per capita]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Social support]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Social support]"
+                      name="Social support"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task 1\Source - 2019_csv.Outputs[Flat File Source Output].Columns[Social support]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Healthy life expectancy]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Healthy life expectancy]"
+                      name="Healthy life expectancy"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task 1\Source - 2019_csv.Outputs[Flat File Source Output].Columns[Healthy life expectancy]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Freedom to make life choices]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Freedom to make life choices]"
+                      name="Freedom to make life choices"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task 1\Source - 2019_csv.Outputs[Flat File Source Output].Columns[Freedom to make life choices]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Generosity]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Generosity]"
+                      name="Generosity"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task 1\Source - 2019_csv.Outputs[Flat File Source Output].Columns[Generosity]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Perceptions of corruption]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Perceptions of corruption]"
+                      name="Perceptions of corruption"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task 1\Source - 2019_csv.Outputs[Flat File Source Output].Columns[Perceptions of corruption]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task 1\Destination - 2019"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Destination - 2019"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[WHR].[2019]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task 1\Destination - 2019.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task 1\Destination - 2019.Inputs[Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - 2019.Inputs[Destination Input].Columns[Overall rank]"
+                      cachedDataType="ui1"
+                      cachedName="Overall rank"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - 2019.Inputs[Destination Input].ExternalColumns[Overall_rank]"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Overall rank]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - 2019.Inputs[Destination Input].Columns[Country or region]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Country or region"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - 2019.Inputs[Destination Input].ExternalColumns[Country_or_region]"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Country or region]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - 2019.Inputs[Destination Input].Columns[Score]"
+                      cachedDataType="r8"
+                      cachedName="Score"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - 2019.Inputs[Destination Input].ExternalColumns[Score]"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Score]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - 2019.Inputs[Destination Input].Columns[GDP per capita]"
+                      cachedDataType="r8"
+                      cachedName="GDP per capita"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - 2019.Inputs[Destination Input].ExternalColumns[GDP_per_capita]"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[GDP per capita]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - 2019.Inputs[Destination Input].Columns[Social support]"
+                      cachedDataType="r8"
+                      cachedName="Social support"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - 2019.Inputs[Destination Input].ExternalColumns[Social_support]"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Social support]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - 2019.Inputs[Destination Input].Columns[Healthy life expectancy]"
+                      cachedDataType="r8"
+                      cachedName="Healthy life expectancy"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - 2019.Inputs[Destination Input].ExternalColumns[Healthy_life_expectancy]"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Healthy life expectancy]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - 2019.Inputs[Destination Input].Columns[Freedom to make life choices]"
+                      cachedDataType="r8"
+                      cachedName="Freedom to make life choices"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - 2019.Inputs[Destination Input].ExternalColumns[Freedom_to_make_life_choices]"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Freedom to make life choices]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - 2019.Inputs[Destination Input].Columns[Generosity]"
+                      cachedDataType="r8"
+                      cachedName="Generosity"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - 2019.Inputs[Destination Input].ExternalColumns[Generosity]"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Generosity]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - 2019.Inputs[Destination Input].Columns[Perceptions of corruption]"
+                      cachedDataType="r8"
+                      cachedName="Perceptions of corruption"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - 2019.Inputs[Destination Input].ExternalColumns[Perceptions_of_corruption]"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Perceptions of corruption]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - 2019.Inputs[Destination Input].ExternalColumns[Overall_rank]"
+                      dataType="ui1"
+                      name="Overall_rank" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - 2019.Inputs[Destination Input].ExternalColumns[Country_or_region]"
+                      dataType="wstr"
+                      length="50"
+                      name="Country_or_region" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - 2019.Inputs[Destination Input].ExternalColumns[Score]"
+                      dataType="r8"
+                      name="Score" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - 2019.Inputs[Destination Input].ExternalColumns[GDP_per_capita]"
+                      dataType="r8"
+                      name="GDP_per_capita" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - 2019.Inputs[Destination Input].ExternalColumns[Social_support]"
+                      dataType="r8"
+                      name="Social_support" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - 2019.Inputs[Destination Input].ExternalColumns[Healthy_life_expectancy]"
+                      dataType="r8"
+                      name="Healthy_life_expectancy" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - 2019.Inputs[Destination Input].ExternalColumns[Freedom_to_make_life_choices]"
+                      dataType="r8"
+                      name="Freedom_to_make_life_choices" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - 2019.Inputs[Destination Input].ExternalColumns[Generosity]"
+                      dataType="r8"
+                      name="Generosity" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - 2019.Inputs[Destination Input].ExternalColumns[Perceptions_of_corruption]"
+                      dataType="r8"
+                      name="Perceptions_of_corruption" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 1\Destination - 2019.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task 1\Destination - 2019.Inputs[Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Destination - 2019.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Destination - 2019.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Destination - 2019.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Destination - 2019.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task 1\Source - 2019_csv"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="2057"
+              name="Source - 2019_csv"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task 1\Source - 2019_csv.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SourceConnectionFlatFile]"
+                  connectionManagerRefId="Package.ConnectionManagers[SourceConnectionFlatFile]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 1\Source - 2019_csv.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - 2019_csv.Outputs[Flat File Source Output].Columns[Overall rank]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - 2019_csv.Outputs[Flat File Source Output].ExternalColumns[Overall rank]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - 2019_csv.Outputs[Flat File Source Output].Columns[Overall rank]"
+                      name="Overall rank"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - 2019_csv.Outputs[Flat File Source Output].Columns[Country or region]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - 2019_csv.Outputs[Flat File Source Output].ExternalColumns[Country or region]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - 2019_csv.Outputs[Flat File Source Output].Columns[Country or region]"
+                      name="Country or region"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - 2019_csv.Outputs[Flat File Source Output].Columns[Score]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - 2019_csv.Outputs[Flat File Source Output].ExternalColumns[Score]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - 2019_csv.Outputs[Flat File Source Output].Columns[Score]"
+                      name="Score"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - 2019_csv.Outputs[Flat File Source Output].Columns[GDP per capita]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - 2019_csv.Outputs[Flat File Source Output].ExternalColumns[GDP per capita]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - 2019_csv.Outputs[Flat File Source Output].Columns[GDP per capita]"
+                      name="GDP per capita"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - 2019_csv.Outputs[Flat File Source Output].Columns[Social support]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - 2019_csv.Outputs[Flat File Source Output].ExternalColumns[Social support]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - 2019_csv.Outputs[Flat File Source Output].Columns[Social support]"
+                      name="Social support"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - 2019_csv.Outputs[Flat File Source Output].Columns[Healthy life expectancy]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - 2019_csv.Outputs[Flat File Source Output].ExternalColumns[Healthy life expectancy]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - 2019_csv.Outputs[Flat File Source Output].Columns[Healthy life expectancy]"
+                      name="Healthy life expectancy"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - 2019_csv.Outputs[Flat File Source Output].Columns[Freedom to make life choices]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - 2019_csv.Outputs[Flat File Source Output].ExternalColumns[Freedom to make life choices]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - 2019_csv.Outputs[Flat File Source Output].Columns[Freedom to make life choices]"
+                      name="Freedom to make life choices"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - 2019_csv.Outputs[Flat File Source Output].Columns[Generosity]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - 2019_csv.Outputs[Flat File Source Output].ExternalColumns[Generosity]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - 2019_csv.Outputs[Flat File Source Output].Columns[Generosity]"
+                      name="Generosity"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - 2019_csv.Outputs[Flat File Source Output].Columns[Perceptions of corruption]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - 2019_csv.Outputs[Flat File Source Output].ExternalColumns[Perceptions of corruption]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - 2019_csv.Outputs[Flat File Source Output].Columns[Perceptions of corruption]"
+                      name="Perceptions of corruption"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - 2019_csv.Outputs[Flat File Source Output].ExternalColumns[Overall rank]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Overall rank" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - 2019_csv.Outputs[Flat File Source Output].ExternalColumns[Country or region]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Country or region" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - 2019_csv.Outputs[Flat File Source Output].ExternalColumns[Score]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Score" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - 2019_csv.Outputs[Flat File Source Output].ExternalColumns[GDP per capita]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="GDP per capita" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - 2019_csv.Outputs[Flat File Source Output].ExternalColumns[Social support]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Social support" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - 2019_csv.Outputs[Flat File Source Output].ExternalColumns[Healthy life expectancy]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Healthy life expectancy" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - 2019_csv.Outputs[Flat File Source Output].ExternalColumns[Freedom to make life choices]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Freedom to make life choices" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - 2019_csv.Outputs[Flat File Source Output].ExternalColumns[Generosity]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Generosity" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - 2019_csv.Outputs[Flat File Source Output].ExternalColumns[Perceptions of corruption]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Perceptions of corruption" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task 1\Source - 2019_csv.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - 2019_csv.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Data Flow Task 1\Source - 2019_csv.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - 2019_csv.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source - 2019_csv.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - 2019_csv.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source - 2019_csv.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task 1.Paths[Data Conversion Output]"
+              endId="Package\Data Flow Task 1\Destination - 2019.Inputs[Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Data Flow Task 1.Paths[Flat File Source Output]"
+              endId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input]"
+              name="Flat File Source Output"
+              startId="Package\Data Flow Task 1\Source - 2019_csv.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+</DTS:Executable>
