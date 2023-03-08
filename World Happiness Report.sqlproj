@@ -11,7 +11,6 @@
     <Delete Files="$(BaseIntermediateOutputPath)\project.assets.json" />
   </Target>
   <ItemGroup>
-    <None Include="WHR2005.dtsx" />
     <None Include="WHR\WHR.pbix" />
   </ItemGroup>
 </Project>
